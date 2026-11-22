@@ -1,0 +1,23 @@
+# Log de captura MITM iniciado em 2026-11-21T14:26:14
+# timestamp | origem -> destino | protocolo | metadados | bytes
+2026-11-21 14:26:16 | 172.30.0.10 -> 172.30.0.2 | DNS | qname=loja.lab resolvido=- | 0 bytes
+2026-11-21 14:26:16 | 172.30.0.10 -> 172.30.0.2 | DNS | qname=loja.lab resolvido=- | 0 bytes
+2026-11-21 14:26:16 | 172.30.0.2 -> 172.30.0.10 | DNS | qname=loja.lab resolvido=172.31.0.80 | 0 bytes
+2026-11-21 14:26:16 | 172.30.0.2 -> 172.30.0.10 | DNS | qname=loja.lab resolvido=- | 0 bytes
+2026-11-21 14:26:16 | 172.30.0.10 -> 172.31.0.80 | HTTPS | sni=loja.lab | 583 bytes
+2026-11-21 14:26:17 | 172.30.0.10 -> 172.30.0.2 | DNS | qname=banco.lab resolvido=- | 0 bytes
+2026-11-21 14:26:17 | 172.30.0.10 -> 172.30.0.2 | DNS | qname=banco.lab resolvido=- | 0 bytes
+2026-11-21 14:26:17 | 172.30.0.2 -> 172.30.0.10 | DNS | qname=banco.lab resolvido=172.31.0.80 | 0 bytes
+2026-11-21 14:26:17 | 172.30.0.2 -> 172.30.0.10 | DNS | qname=banco.lab resolvido=- | 0 bytes
+2026-11-21 14:26:17 | 172.30.0.10 -> 172.31.0.80 | HTTPS | sni=banco.lab | 583 bytes
+2026-11-21 14:26:19 | 172.30.0.10 -> 172.30.0.2 | DNS | qname=noticias.lab resolvido=- | 0 bytes
+2026-11-21 14:26:19 | 172.30.0.10 -> 172.30.0.2 | DNS | qname=noticias.lab resolvido=- | 0 bytes
+2026-11-21 14:26:19 | 172.30.0.2 -> 172.30.0.10 | DNS | qname=noticias.lab resolvido=172.31.0.80 | 0 bytes
+2026-11-21 14:26:19 | 172.30.0.2 -> 172.30.0.10 | DNS | qname=noticias.lab resolvido=- | 0 bytes
+2026-11-21 14:26:19 | 172.30.0.10 -> 172.31.0.80 | HTTPS | sni=noticias.lab | 583 bytes
+2026-11-21 14:26:20 | 172.30.0.10 -> 172.30.0.2 | DNS | qname=video.lab resolvido=- | 0 bytes
+2026-11-21 14:26:20 | 172.30.0.10 -> 172.30.0.2 | DNS | qname=video.lab resolvido=- | 0 bytes
+2026-11-21 14:26:20 | 172.30.0.2 -> 172.30.0.10 | DNS | qname=video.lab resolvido=172.31.0.80 | 0 bytes
+2026-11-21 14:26:20 | 172.30.0.2 -> 172.30.0.10 | DNS | qname=video.lab resolvido=- | 0 bytes
+2026-11-21 14:26:20 | 172.30.0.10 -> 172.31.0.80 | HTTPS | sni=video.lab | 583 bytes
+2026-11-21 14:26:23 | 172.30.0.10 -> 172.31.0.80 | HTTPS | sni=loja.lab | 583 bytes

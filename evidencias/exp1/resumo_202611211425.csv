@@ -1,0 +1,3 @@
+dominio,ip_destino,protocolos,bytes_total
+site-http.lab,172.31.0.80,DNS|HTTP,217
+banco.lab,172.31.0.80,DNS|HTTPS,1054

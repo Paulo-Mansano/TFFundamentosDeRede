@@ -1,0 +1,15 @@
+[*] Varredura ARP em 172.30.0.3/255.255.255.0 (interface eth0)...
+[*] 3 host(s) ativo(s) encontrado(s):
+    0) 172.30.0.1       de:06:13:45:45:da
+    1) 172.30.0.10      9a:c6:7d:a2:a2:1c
+    2) 172.30.0.2       5a:06:55:7e:cd:f2
+[+] Vítima  172.30.0.10 -> 9a:c6:7d:a2:a2:1c
+[+] Gateway 172.30.0.2 -> 5a:06:55:7e:cd:f2
+[*] ip_forward: 1 -> 1
+[*] Logs: /app/evidencias/exp2/captura_202611211426.log
+[*] CSV : /app/evidencias/exp2/resumo_202611211426.csv
+[+] MITM ativo. Ctrl+C para encerrar com auto-cura.
+
+[*] Sinal 2 recebido — iniciando AUTO-CURA...
+[*] ip_forward restaurado para 1
+[+] Auto-cura concluída. ARP e ip_forward restaurados.

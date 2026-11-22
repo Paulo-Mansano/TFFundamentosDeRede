@@ -1,0 +1,2 @@
+dominio,ip_destino,protocolos,bytes_total
+loja.lab,172.31.0.80,DNS|HTTPS,1958

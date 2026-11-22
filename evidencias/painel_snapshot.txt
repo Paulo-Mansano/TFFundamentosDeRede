@@ -1,0 +1,26 @@
+========================================================================
+  INTERCEPTADOR MITM — Auditoria de Metadados (uptime 8s)
+========================================================================
+[ARP SPOOFING]
+  Interface : eth0  (meu MAC 4e:64:d6:10:93:ff)
+  Vitima    : 172.30.0.10  MAC 9a:c6:7d:a2:a2:1c
+  Gateway   : 172.30.0.2  MAC 5a:06:55:7e:cd:f2
+  Status    : ENVENENANDO (ativo)   ip_forward=1
+
+[CONTADORES]
+  Pacotes: 101      DNS: 20     HTTP: 1      TLS: 4      Total: 18.8 KB
+
+[ULTIMOS DESTINOS]
+  DOMINIO                           IP              PROTOCOLOS       BYTES
+  ----------------------------------------------------------------------
+  site-http.lab                     172.31.0.80     DNS,HTTP         150 B
+  video.lab                         172.31.0.80     DNS,HTTPS        980 B
+  noticias.lab                      172.31.0.80     DNS,HTTPS        983 B
+  banco.lab                         172.31.0.80     DNS,HTTPS        980 B
+  loja.lab                          172.31.0.80     DNS,HTTPS        979 B
+
+  Ctrl+C para encerrar (dispara auto-cura do ARP)
+
+[*] Sinal 2 recebido — iniciando AUTO-CURA...
+[*] ip_forward restaurado para 1
+[+] Auto-cura concluída. ARP e ip_forward restaurados.

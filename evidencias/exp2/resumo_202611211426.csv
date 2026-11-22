@@ -1,0 +1,5 @@
+dominio,ip_destino,protocolos,bytes_total
+loja.lab,172.31.0.80,DNS|HTTPS,1604
+banco.lab,172.31.0.80,DNS|HTTPS,1022
+noticias.lab,172.31.0.80,DNS|HTTPS,1025
+video.lab,172.31.0.80,DNS|HTTPS,1418

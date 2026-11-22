@@ -1,0 +1,12 @@
+# Log de captura MITM iniciado em 2026-11-21T14:25:51
+# timestamp | origem -> destino | protocolo | metadados | bytes
+2026-11-21 14:25:54 | 172.30.0.10 -> 172.30.0.2 | DNS | qname=site-http.lab resolvido=- | 0 bytes
+2026-11-21 14:25:54 | 172.30.0.10 -> 172.30.0.2 | DNS | qname=site-http.lab resolvido=- | 0 bytes
+2026-11-21 14:25:54 | 172.30.0.2 -> 172.30.0.10 | DNS | qname=site-http.lab resolvido=172.31.0.80 | 0 bytes
+2026-11-21 14:25:54 | 172.30.0.2 -> 172.30.0.10 | DNS | qname=site-http.lab resolvido=- | 0 bytes
+2026-11-21 14:25:54 | 172.30.0.10 -> 172.31.0.80 | HTTP | host=site-http.lab GET /area-cliente?user=joao&senha=123 UA="NavegadorVitima/1.0" cookie=PRESENTE | 217 bytes
+2026-11-21 14:25:54 | 172.30.0.10 -> 172.30.0.2 | DNS | qname=banco.lab resolvido=- | 0 bytes
+2026-11-21 14:25:54 | 172.30.0.10 -> 172.30.0.2 | DNS | qname=banco.lab resolvido=- | 0 bytes
+2026-11-21 14:25:54 | 172.30.0.2 -> 172.30.0.10 | DNS | qname=banco.lab resolvido=172.31.0.80 | 0 bytes
+2026-11-21 14:25:54 | 172.30.0.2 -> 172.30.0.10 | DNS | qname=banco.lab resolvido=- | 0 bytes
+2026-11-21 14:25:54 | 172.30.0.10 -> 172.31.0.80 | HTTPS | sni=banco.lab | 583 bytes

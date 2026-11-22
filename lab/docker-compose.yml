@@ -1,0 +1,80 @@
+# =====================================================================
+# Ambiente de testes ISOLADO (Cenário A do enunciado) — nenhum pacote
+# deste laboratório toca a rede física do host. Todo o ARP spoofing
+# acontece dentro das redes bridge Docker abaixo.
+#
+# Topologia (MITM clássico vítima <-> gateway):
+#
+#   lab_net  172.30.0.0/24          srv_net 172.31.0.0/24
+#   ----------------------          ---------------------
+#   victim    .10  ----\                         /---- webserver .80
+#   attacker  .3   ----  gateway .2 == .2 (roteia) ----
+#                        (DNS + IP forward)
+#
+#   * A vítima usa o gateway (.2) como rota default e DNS.
+#   * O webserver só é alcançável através do gateway -> o tráfego
+#     vítima->web PASSA pelo gateway, onde o atacante se insere via ARP.
+# =====================================================================
+
+services:
+
+  gateway:
+    build: ./gateway
+    container_name: lab-gateway
+    hostname: gateway
+    privileged: true            # ip_forward + roteamento entre redes
+    networks:
+      lab_net:
+        ipv4_address: 172.30.0.2
+      srv_net:
+        ipv4_address: 172.31.0.2
+    command: ["/entrypoint.sh"]
+
+  webserver:
+    build: ./webserver
+    container_name: lab-webserver
+    hostname: webserver
+    cap_add: [NET_ADMIN]
+    depends_on: [gateway]
+    networks:
+      srv_net:
+        ipv4_address: 172.31.0.80
+    command: ["/entrypoint.sh"]
+
+  victim:
+    build: ./victim
+    container_name: lab-victim
+    hostname: victim
+    cap_add: [NET_ADMIN]
+    depends_on: [gateway, webserver]
+    networks:
+      lab_net:
+        ipv4_address: 172.30.0.10
+    command: ["/entrypoint.sh"]
+
+  attacker:
+    build: ./attacker
+    container_name: lab-attacker
+    hostname: attacker
+    privileged: true            # raw socket + escrita em /proc (ip_forward)
+    depends_on: [gateway, victim, webserver]
+    volumes:
+      - ../src:/app/src:ro                 # código da aplicação (somente leitura)
+      - ../evidencias:/app/evidencias      # logs/csv/pcap gerados
+    working_dir: /app/src
+    networks:
+      lab_net:
+        ipv4_address: 172.30.0.3
+    command: ["/entrypoint.sh"]
+
+networks:
+  lab_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.30.0.0/24
+  srv_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.31.0.0/24
