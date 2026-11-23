@@ -1,7 +1,8 @@
 # Relatório Técnico — Ataque MITM com ARP Spoofing e Auditoria de Metadados
 
 **PUCRS — Fundamentos de Redes de Computadores — 2026/2**
-**Grupo G__ — Integrantes: ____________________**
+**Grupo H — Integrantes: Gabrielle Guarani da Silva, Gustavo Filipi Lopes Machado e Paulo Eduardo Carvalho Mansano**
+
 **Data: novembro de 2026**
 
 > Documento-base do relatório. O texto técnico e os resultados já estão
